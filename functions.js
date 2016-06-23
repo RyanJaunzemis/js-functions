@@ -87,23 +87,25 @@ function square(x){
 function calculate(operation,x,y){
 	if(operation==="add"){
 		var result= (x+y)
-		console.log(x + "+" + y + "=" + result)
+		console.log(x + " + " + y + " = " + result)
 		return result;
 	}
 	if(operation==="subtract"){
 		var result= (x-y)
-		console.log(x + "-" + y + "=" + result)
+		console.log(x + " - " + y + " = " + result)
 		return result;
 	}
 	if(operation==="multiply"){
 		var result= (x*y)
-		console.log(x + "*" + y )
-		return(x*y);
+		console.log(x + " * " + y + " = " + result)
+		return result;
 	}
 	if(operation==="divide"){
-		console.log(x + "/" + y )
-		return(x/y);
+		var result= (x/y)
+		console.log(x + " / " + y + " = " + result) 
+		return result;
 	}
+
 
 }
 
@@ -114,15 +116,28 @@ function calculate(operation,x,y){
  * @param {number} b
  * @return {boolean} `a` is larger than `b`
  */
-
-
+	function isGreaterThan(a,b){
+		if(a>b){
+			return true;
+		}
+		else{
+			return false;
+		}
+		}
 /**
  * Returns true if `a` is less than `b`.
  * @param {number} a
  * @param {number} b
  * @return {boolean} `a` is smaller than `b`
  */
-
+function isLessThan(a,b){
+	if(a<b){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
 
 /**
  * Returns true if `a` and `b` are equal.
@@ -130,6 +145,15 @@ function calculate(operation,x,y){
  * @param {number} b
  * @return {boolean} the numbers are equal
  */
+function areEqual(a,b){
+	if(a===b){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+
 
 
 /**
@@ -138,7 +162,14 @@ function calculate(operation,x,y){
  * @param {number} y
  * @return {number} the smallest number
  */
-
+function minimum(x,y){
+	if(x<y){
+		return(x)
+	}
+	else{
+		return(y)
+	}
+}
 
 /**
  * Returns the largest value of two numbers.
@@ -146,6 +177,14 @@ function calculate(operation,x,y){
  * @param {number} y
  * @return {number} the largest number
  */
+function maximum(x,y){
+	if(x<y){
+		return(y)
+	}
+	else{
+		return(x)
+	}
+}
 
 
 /**
@@ -153,14 +192,28 @@ function calculate(operation,x,y){
  * @param {number} n
  * @return {boolean} the number is even
  */
-
+function isEven(n){
+	if(n % 2 === 0){
+		return true
+	} 
+	else{
+		return false
+	}
+}
 
 /**
  * Returns true if `n` is odd.
  * @param {number} n
  * @return {boolean} the number is odd
  */
-
+function isOdd(n){
+	if(n%2!==0){
+		return true
+	}
+	else{
+		return false
+	}
+}
 
 /**
  * Returns a letter grade.
@@ -173,7 +226,30 @@ function calculate(operation,x,y){
  * @param {number} total maximum possible score
  * @return {string} the score represented as a letter grade
  */
+function letterGrade(score,totalMaximumPossibleScore){
+	if(score===range(90,100)){
+		console.log("A" + 100)
+		return "A"
+	}
+	if(score===range(80,89)){
+		console.log("B" + 100)
+		return "B"
+	}
+	if(score===range(70,79)){
+		console.log("C" + 100)
+		return "C"
+	}
+	if(score===range(60,69)){
+		console.log("D" + 100)
+		return "D"
+	}
+	if(score===range(0,59)){
+		console.log("F" + 100)
+		return "F"
+	}
 
+
+}
 
 /**
  * Checks if a `restaurant` object has a `reviews` property.
