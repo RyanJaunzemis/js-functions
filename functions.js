@@ -227,29 +227,32 @@ function isOdd(n){
  * @return {string} the score represented as a letter grade
  */
 function letterGrade(score,totalMaximumPossibleScore){
-	if(score===range(90,100)){
-		console.log("A" + 100)
-		return "A"
-	}
-	if(score===range(80,89)){
-		console.log("B" + 100)
-		return "B"
-	}
-	if(score===range(70,79)){
-		console.log("C" + 100)
-		return "C"
-	}
-	if(score===range(60,69)){
-		console.log("D" + 100)
-		return "D"
-	}
-	if(score===range(0,59)){
-		console.log("F" + 100)
-		return "F"
-	}
-
-
+	var x= (score/totalMaximumPossibleScore);
+	var totalMaximumPossibleScore=(1);
+		if(x>= 0.9 && x<= 1) {
+			return "A"
+		}
+		
+		if(x>= 0.8 && x<= 0.89){
+			return "B"
+		}
+		
+		if(x>= 0.7 && x<= 0.79){
+			return "C"
+		}
+		
+		if(x>= 0.6 && x<= 0.7){
+			return "D"
+		}
+		
+		if(x>= 0 && x<= 0.59){
+			return "F"
+		}
+		
 }
+
+
+
 
 /**
  * Checks if a `restaurant` object has a `reviews` property.
